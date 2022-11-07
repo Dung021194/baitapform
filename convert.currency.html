@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Chuyển đổi tiền tệ</title>
+</head>
+<body>
+<script>
+ function convert (){
+let amount = document.getElementById("quanity").value;
+let from = document.getElementById("from1").value;
+let to = document.getElementById("to1").value;
+let result;
+ if (from == "USD" && to == "VND"){result = amount * 25000}
+ else if (from=="VND" && to == "USD"){result=amount/25000}
+ else {result = amount};
+    document.getElementById("Result1").innerHTML = result;
+ }
+</script>
+<table>
+    <tr>
+        <th> Amount</th>
+        <th> From Currency</th>
+        <th> To curency</th>
+        <th></th>
+</tr>
+     <tr>
+         <td> <input type="text" id="quanity"> </td>
+         <td>
+             <label for="from1"></label>
+             <select id="from1">
+             <option value="USD">USD</option>
+             <option value="VND">VND</option>
+
+         </select>
+
+             <label for="to1"></label>
+             <select id="to1">
+                 <option value="VND">VND</option>
+                 <option value="USD">USD</option>
+             </select>
+         </td>
+         <br>
+        <td><input type="submit" value="Submit" onclick="convert()"></td><br>
+         <p id="Result1"></p>
+         <p>Kết quả là:
+         </p>
+    </tr>
+</table>
+
+</body>
+</html>
