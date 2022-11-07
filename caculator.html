@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Ứng dụng máy tính</title>
+</head>
+<body>
+<script>
+    function tong ()
+    {
+        let a = +document.getElementById("num1").value;
+        let b = +document.getElementById("num2").value;
+        let result= "Kết quả: " + (a+b);
+        document.getElementById("Result").innerHTML= result;
+    }
+
+    function hieu ()
+   {
+       let a = document.getElementById("num1").value;
+       let b = document.getElementById("num2").value;
+       let result = "Kết quả: " + (a-b);
+       document.getElementById("Result").innerHTML= result;
+   }
+   function tich()
+   {
+       let a = document.getElementById("num1").value;
+       let b = document.getElementById("num2").value;
+       let result = "Kết quả: " + (a*b);
+       document.getElementById("Result").innerHTML= result;
+   }
+   function thuong ()
+   {
+       let a = document.getElementById("num1").value;
+       let b = document.getElementById("num2").value;
+       let result = "Kết quả: " + (a/b);
+       document.getElementById("Result").innerHTML= result;
+   }
+
+</script>
+<table>
+<tr>
+    <td> <input type="text" id="num1"></td>
+    <td> <input type="text" id="num2"></td>
+    <td> <p id = "Result"> </p> </td>
+</tr>
+</table>
+<input type="submit" value="Addition(+)" onclick="tong()">
+<input type="submit" value="Subtraction(-)" onclick="hieu()">
+<input type="submit" value="Multiplication(X)" onclick="tich()">
+<input type="submit" value="Division(/)" onclick="thuong()">
+
+</body>
+</html>
